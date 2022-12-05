@@ -2,23 +2,13 @@
 file = open("input.txt", "r")
 content = file.read().splitlines()
 
-import re
-
-num_regex = "\d+"
-
-
-def regex_parse(pattern, str):
-    content = [int(x) for x in re.findall(pattern, str)]
-    print(content)
-
 
 def solve(fn):
     count = 0
     for i in content:
-        regex_parse(num_regex, i)
-        # pairs = i.split(",")
-        # pair = [[int(x) for x in range.split("-")] for range in pairs]
-        # count += fn(pair)
+        pairs = i.split(",")
+        pair = [[int(x) for x in range.split("-")] for range in pairs]
+        count += fn(pair)
     print(count)
 
 
