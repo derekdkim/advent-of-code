@@ -22,7 +22,7 @@ def parse():
                     crates.append(line[i])
                 stack.append(crates)
 
-    # Organize stack as queue in dictionary
+    # Organize stacks in hash map
     stacks = {}
     for i in range(1, 10):
         stacks[i] = []
@@ -47,9 +47,9 @@ def parse():
 
 def print_answer(stacks):
     res = []
-    for i in stacks:
-        if len(stacks[i]) > 0:
-            crate = stacks[i].pop()
+    for key in stacks:
+        if len(stacks[key]) > 0:
+            crate = stacks[key].pop()
             res.append(crate)
     print("".join(res))
 
@@ -71,6 +71,8 @@ def p1():
 
 def p2():
     stacks, ins = parse()
+
+    # Process instructions
     for i in ins:
         # i[0] is the number of crates
         # i[1] is origin
