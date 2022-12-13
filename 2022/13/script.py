@@ -87,4 +87,7 @@ def p2():
     return d_1_i * d_2_i
 
 
+print("Part 1: ", end="")
+print(p1())
+print("Part 2: ", end="")
 print(p2())
