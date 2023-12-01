@@ -16,6 +16,9 @@ num_conv_ref = {
     'nine': '9'
 }
 
+# P2 Solution:
+# Standardize all eligible substrings and digits into a (start_index, number) tuple and sort in ascending order.
+
 def solve(arr):
     calibration = 0
     for string in arr:
