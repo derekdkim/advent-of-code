@@ -132,19 +132,6 @@ def p2(n):
     # 0 24 12 | 2 28 15 5 34 21 10 | 2 28 15 5 34 21 10 | 2 28 15 5 34 21 10 | ...
     # The first 3 cycles (of 5 shapes) have unique states, but after that, there's a pattern
     # every 7 cycles, the board effectively resets
-    # Test:
-    # rock 15: max_h = 25
-    # .....## 25
-    # rock 50: max_h = 78
-    # ..###..78
-    # rock 85: 131
-    # ..###..131
-    # 2022 - 15 = 2007
-    # 2007 % 35 = 12
-    # 78 - 25 =  53; 53 height per cycle
-    # 2007 // 35 = 57
-    # 57 * 53 = 3021
-    # 25 + 3021 + 21 = 3067; one off
     gust = parse()
     grid = init_container()
     max_h = 0
