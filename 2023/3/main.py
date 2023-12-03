@@ -4,8 +4,8 @@ file = open("input.txt", "r")
 
 lines = file.read().splitlines()
 
-def solve_p1(lines):
-    parts_ref, coords = parse_engine(lines)
+def solve_p1(engine):
+    parts_ref, coords = engine
     total = 0
 
     for coord in coords:
@@ -23,8 +23,8 @@ def solve_p1(lines):
     
     print(total)
 
-def solve_p2(lines):
-    parts_ref, coords = parse_engine(lines)
+def solve_p2(engine):
+    parts_ref, coords = engine
     total = 0
 
     for coord in coords:
@@ -70,4 +70,6 @@ def parse_engine(lines):
     
     return (engine_parts, symbols_indexes)
 
-solve_p2(lines)
+engine = parse_engine(lines)
+solve_p1(engine)
+solve_p2(engine)
