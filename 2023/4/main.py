@@ -1,5 +1,3 @@
-import re
-
 file = open("input.txt", "r").read().splitlines()
 
 def solve_p1(tickets):

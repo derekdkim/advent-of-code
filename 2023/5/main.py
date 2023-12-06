@@ -1,4 +1,5 @@
 import queue
+import time
 
 file = open("input.txt", "r").read().splitlines()
 
@@ -82,6 +83,8 @@ def solve_p2(maps):
     
     return min_loc
 
+start = time.time()
 maps = parse_maps(file)
 print(solve_p1(maps))
 print(solve_p2(maps))
+print("Elapsed time: ", time.time() - start, "s")
